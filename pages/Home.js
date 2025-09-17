@@ -1,10 +1,10 @@
-"use client";
-
 import React, { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link, useNavigate } from "react-router-dom"; // Added useNavigate
+import { createPageUrl } from "@/utils";
 import { 
   Building2, 
   Coins, 
@@ -32,9 +32,9 @@ import {
   Target,
   Wallet,
   RefreshCw,
-  Phone,
-  Key,
-  ArrowUpLeft
+  Phone, // Added Phone icon
+  Key,   // Added Key icon
+  ArrowUpLeft // Added ArrowUpLeft icon
 } from "lucide-react";
 
 import Hero3D from "../components/home/Hero3D";
@@ -46,12 +46,14 @@ import ProjectsShowcase from "../components/home/ProjectsShowcase";
 import MarketInsights from "../components/home/MarketInsights";
 import PublicHeader from "../components/home/PublicHeader";
 import PublicFooter from "../components/home/PublicFooter";
-import GuestModeButton from "../components/ui/GuestModeButton";
+import GuestModeButton from "../components/ui/GuestModeButton"; // Added GuestModeButton
 
 export default function Home() {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
   const handleGetStarted = () => {
     // Navigate to a registration or login page, or a general onboarding page
-    console.log("Navigate to Dashboard");
+    navigate(createPageUrl("Dashboard"));
   };
 
   return (
@@ -197,14 +199,18 @@ export default function Home() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" variant="secondary" className="text-xl px-10 py-6 rounded-2xl bg-white text-emerald-700 hover:bg-gray-100">
-              <Eye className="w-6 h-6 mr-3" />
-              شروع سرمایه‌گذاری
-            </Button>
-            <Button size="lg" variant="outline" className="text-xl px-10 py-6 rounded-2xl border-2 border-white text-white hover:bg-white/10">
-              <Plus className="w-6 h-6 mr-3" />
-              ثبت ملک برای توکن‌سازی
-            </Button>
+            <Link to={createPageUrl("Properties")}>
+              <Button size="lg" variant="secondary" className="text-xl px-10 py-6 rounded-2xl bg-white text-emerald-700 hover:bg-gray-100">
+                <Eye className="w-6 h-6 mr-3" />
+                شروع سرمایه‌گذاری
+              </Button>
+            </Link>
+            <Link to={createPageUrl("OwnerPortal")}>
+              <Button size="lg" variant="outline" className="text-xl px-10 py-6 rounded-2xl border-2 border-white text-white hover:bg-white/10">
+                <Plus className="w-6 h-6 mr-3" />
+                ثبت ملک برای توکن‌سازی
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
