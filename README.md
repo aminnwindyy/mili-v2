@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MelkChain - پلتفرم توکن‌سازی املاک
 
-## Getting Started
+پلتفرم جامع سرمایه‌گذاری در املاک با تکنولوژی بلاک‌چین
 
-First, run the development server:
+## ویژگی‌های کلیدی
+
+- 🏢 **توکن‌سازی املاک**: تبدیل املاک به توکن‌های قابل معامله
+- 💰 **سرمایه‌گذاری آسان**: شروع سرمایه‌گذاری با حداقل سرمایه
+- 📊 **داشبورد پیشرفته**: مدیریت کامل پورتفولیو
+- 🔒 **امنیت بلاک‌چین**: حفاظت کامل از سرمایه‌گذاری‌ها
+- 📱 **رابط کاربری فارسی**: طراحی مناسب برای کاربران ایرانی
+
+## شروع کار
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# نصب وابستگی‌ها
+bun install
+
+# اجرای سرور توسعه
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+پروژه روی [http://localhost:3000](http://localhost:3000) در دسترس خواهد بود.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## تکنولوژی‌های استفاده شده
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 15** - فریمورک React
+- **TypeScript** - توسعه ایمن
+- **Tailwind CSS** - استایل‌دهی
+- **shadcn/ui** - کامپوننت‌های UI
+- **Three.js** - انیمیشن‌های سه‌بعدی
+- **Recharts** - نمودارهای تعاملی
+- **Framer Motion** - انیمیشن‌ها
 
-## Learn More
+## ساختار پروژه
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/                    # صفحات Next.js
+├── components/            # کامپوننت‌های React
+│   ├── home/             # کامپوننت‌های صفحه اصلی
+│   ├── dashboard/        # کامپوننت‌های داشبورد
+│   └── ui/               # کامپوننت‌های پایه
+├── entities/             # مدل‌های داده
+└── lib/                  # ابزارهای کمکی
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## مشارکت
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+برای مشارکت در پروژه، لطفاً از دستورالعمل‌های زیر پیروی کنید:
 
-## Deploy on Vercel
+1. Fork کردن پروژه
+2. ایجاد branch جدید
+3. Commit کردن تغییرات
+4. Push کردن به branch
+5. ایجاد Pull Request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## لایسنس
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+این پروژه تحت لایسنس MIT منتشر شده است.
